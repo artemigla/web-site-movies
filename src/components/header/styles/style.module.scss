@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 3fr 1fr;
     width: 100%;
     height: 166px;
+    transition: 1s;
 }
 
 .logo {
@@ -36,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 1s;
 }
 
 .searchWrapper {
@@ -57,4 +59,44 @@
 
 .rightSidebar {
     height: 166px;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.check {
+    position: relative;
+    margin-top: 10px;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #353535;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+    transform: translateX(50%);
+}
+
+input[type="checkbox"]:checked~.check {
+    background: rgb(78, 169, 255);
+}
+
+.check::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #ffffff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+input[type="checkbox"]:checked~.check::after {
+    transform: translateX(125%);
+    background: rgb(233, 233, 233);
 }
