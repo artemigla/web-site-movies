@@ -10,7 +10,7 @@ export const Header = ({ logo }) => {
 
     return (
         <header className={styles.container} style={{ background: isDark ? darkMode.background : lightMode.background }}>
-            <div className={styles.logo}>
+            <div className={styles.logo} style={{ color: isDark ? darkMode.text : lightMode.text }}>
                 <b>{logo}<span className={styles.span}>NET</span></b>
             </div>
             <div className={styles.categories}>
