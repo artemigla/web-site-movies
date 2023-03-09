@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/artemigla.github.io/web-site-movies/static/css/main.b94a4c92.css",
+    "main.js": "/artemigla.github.io/web-site-movies/static/js/main.e56bf08d.js",
+    "index.html": "/artemigla.github.io/web-site-movies/index.html",
+    "main.b94a4c92.css.map": "/artemigla.github.io/web-site-movies/static/css/main.b94a4c92.css.map",
+    "main.e56bf08d.js.map": "/artemigla.github.io/web-site-movies/static/js/main.e56bf08d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b94a4c92.css",
+    "static/js/main.e56bf08d.js"
+  ]
+}
