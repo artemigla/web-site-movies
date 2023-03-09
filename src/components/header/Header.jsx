@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styles from './styles/style.module.scss';
 import { darkMode, lightMode } from '../colorsThemes/ColorTheme';
 import { ThemeContext } from '../colorsThemes/ThemesContext';
+import { Link } from 'react-router-dom';
 
 export const Header = ({ logo }) => {
 
@@ -14,12 +15,12 @@ export const Header = ({ logo }) => {
                 <b>{logo}<span className={styles.span}>NET</span></b>
             </div>
             <div className={styles.categories}>
-                <nav className={styles.navigation} style={{ color: isDark ? darkMode.text : lightMode.text }}>
-                    <p>Movies</p>
-                    <p>TV Shows</p>
-                    <p>Anime</p>
+                <nav className={styles.navigation}>
+                    <Link style={{ color: isDark ? darkMode.text : lightMode.text }} to={'/'}>Movies</Link>
+                    <Link style={{ color: isDark ? darkMode.text : lightMode.text }} to={'/tvshow'}>TV Show</Link>
+                    <Link style={{ color: isDark ? darkMode.text : lightMode.text }} to={'/discovery'}>Discovery</Link>
                 </nav>
-                <div className={styles.searchWrapper}>
+                <div className={styles.searchWrapper} >
                     <input
                         type={'search'}
                         className={styles.search}
@@ -28,9 +29,9 @@ export const Header = ({ logo }) => {
                 </div>
             </div>
             <div className={styles.rightSidebar}>
-                <label className={styles.checkedTheme}>
-                    <input type={'checkbox'} onChange={clickTheme} />
-                    <span className={styles.check}></span>
+                <label>
+                    <input type={'checkbox'} onChange={clickTheme} className={styles.checkToggle} />
+                    <span className={styles.check} ></span>
                 </label>
             </div>
         </header>
